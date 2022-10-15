@@ -57,7 +57,7 @@ Indexing RBG images using distance intersection of histograms
 <p> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://jupyter.org" target="_blank" rel="noreferrer"> <img src="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg" alt="jupyter" width="80" height="40"/> </a></p>
 
 ### project links :
-[notebook and frontend](https://github.com/Frostbite22/TuniSci)<br>
+[notebook and frontend](https://github.com/Frostbite22/Naive-images-search-engine)<br>
 
 ## Mobile development :
 ### 1-Digital ISI
