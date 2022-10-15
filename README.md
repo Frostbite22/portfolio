@@ -58,3 +58,13 @@ Indexing RBG images using distance intersection of histograms
 
 ### project links :
 [notebook and frontend](https://github.com/Frostbite22/TuniSci)<br>
+
+## Mobile development :
+### 1-Digital ISI
+### summary :
+This is digital ISI Ionic mobile app interacting with Camunda engine rest to connect administrators, students and professor and automate the boring tasks
+### technologies :
+<p><a href="https://ionicframework.com" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="ionic" width="40" height="40"/> </a><a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a><a href="https://camunda.com/" target="_blank" rel="noreferrer"> <img src="https://camunda.com/wp-content/uploads/2020/05/logo-camunda-black.svg" alt="camunda" width="80" height="40"/> </a></p>
+
+### project links :
+[ionic app](https://github.com/Frostbite22/Digitalisi-Ionic-App)<br>
