@@ -1,131 +1,166 @@
-<html><head><title>portfolio</title><style>body {
-   background-color: #fdfdfd;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 760px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Landoulsi Mohamed Fares</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-a
-{
-color: #2a7ae2; font-size: 17px; text-decoration:none;
-}
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+        <div class="container mx-auto py-6 px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Landoulsi Mohamed Fares</h1>
+            <nav>
+                <a href="#about" class="mx-3 text-lg">About</a>
+                <a href="#experience" class="mx-3 text-lg">Experience</a>
+                <a href="#projects" class="mx-3 text-lg">Projects</a>
+                <a href="#skills" class="mx-3 text-lg">Skills & Certificates</a>
+                <a href="#contact" class="mx-3 text-lg">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-p
-{
-    font : 400 16px/1.5 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 
-            Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-}
-</style></head><body><h1 id="portfolio">PORTFOLIO</h1>
-<p>I am Mohamed Fares Landoulsi 👋, a software engineering student at the Higher Institute of Computer Science Ariana. This is a highlight of my recent projects, you can find the extensive list of projects I’m working on in Github <a href="https://github.com/Frostbite22">https://github.com/Frostbite22</a></p>
-<h2 id="blockchain-applications-">Deep learning :</h2>
-<h3 >1-Mammography images classification using Pytorch</h3>
-<h3 id="summary-">summary :</h3>
-<p>This is a deep learning project for mammography images classification using Pytorch
-</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://pytorch.org/assets/images/logo-icon.svg" alt="pytorch" width="40" height="40"/> </a></p>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">About Me</h2>
+            <p class="text-lg mb-4">I am a Junior AI Software Engineer based in Braunschweig, Germany. I am passionate about AI, software development, and blockchain technology. I hold an Engineer’s Degree in Software Engineering and a Bachelor’s Degree in Computer Science.</p>
+        </div>
+    </section>
 
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/Mammography-classification">Notebook</a></p>
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Experience Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Junior AI Engineer - Novobit</h3>
+                    <p class="text-gray-700 mb-4">January 2024 - Ongoing</p>
+                    <p>Worked on a code generation project using NLP and modern LLM methods.</p>
+                </div>
+                <!-- More Experience Cards -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">AI Intern - Novobit</h3>
+                    <p class="text-gray-700 mb-4">May 2023 - December 2023</p>
+                    <p>Developed obstacle detection systems for smart glasses for visually impaired individuals.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Blockchain Developer Intern - Opus Lab</h3>
+                    <p class="text-gray-700 mb-4">July 2022 - November 2022</p>
+                    <p>Developed a decentralized courses booking system using Solidity and other blockchain technologies.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Web Developer Intern - Innovup</h3>
+                    <p class="text-gray-700 mb-4">July 2021 - September 2021</p>
+                    <p>Developed a web application for automating postal transfer processes.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">NLU/NLP Developer Intern - iCompass</h3>
+                    <p class="text-gray-700 mb-4">February 2020 - June 2020</p>
+                    <p>Developed a chatbot development platform using Rasa Open Source.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3 >2-CIFAR-10 Dataset classification using ResNet18</h3>
-<h3 id="summary-">summary :</h3>
-<p>This is a deep learning project where we replicate the ResNet18 architecture to classify images from the public dataset cifar-10.
-</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://pytorch.org/assets/images/logo-icon.svg" alt="pytorch" width="40" height="40"/> </a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">FunAI</h3>
+                    <p class="mb-2">A project focused on optimizing language model prompts using the DSPy framework and LLM tools. This involves developing more efficient and accurate language models for various AI applications.</p>
+                </div>
+                <!-- More Project Cards -->
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Concerto</h3>
+                    <p class="mb-2">A Flask and React web application designed to match artists with venues for performances. This project aims to simplify the process of booking and managing events for both artists and venue managers.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">TuniSci</h3>
+                    <p class="mb-2">A ranking system for professors and researchers in Tunisian universities. This project helps in evaluating and comparing academic performances based on various metrics and criteria.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Naive Image Search Engine</h3>
+                    <p class="mb-2">A basic image search engine developed using Python, pandas, and numpy. This project focuses on implementing image retrieval techniques and algorithms for efficient search results.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">World Cup 2022 Management App</h3>
+                    <p class="mb-2">An application developed with SpringBoot and Angular for managing World Cup 2022 events. It includes a prediction model developed in Python for forecasting match outcomes.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Training Management App</h3>
+                    <p class="mb-2">A management application using SpringBoot, Angular, and Swagger for organizing and managing training sessions. This project aims to streamline the process of scheduling and tracking training activities.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Student Management App</h3>
+                    <p class="mb-2">An application developed using Flask and SQLite3 to link students, administration, and professors. This project facilitates communication and management of student-related activities and information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/cifar-10">Notebook</a></p>
+    <!-- Skills & Certificates Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">Skills & Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Skills</h3>
+                    <p>Languages: Java, Python, C++, Solidity</p>
+                    <p>Frameworks: Flask, React, Angular, Rasa</p>
+                    <p>Tools: Docker, MongoDB, TensorFlow, PyTorch</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-semibold mb-2">Certificates</h3>
+                    <p>Microsoft Technology Associate: Introduction programming using Java</p>
+                    <p>Coursera: Deep learning specialization, C++ for C programmers</p>
+                    <p>MongoDB: Mongo Basics, MongoDB for Python Developers</p>
+                    <p>Linux Foundation: Blockchain</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h3 >3-Sign Language MNIST dataset</h3>
-<h3 id="summary-">summary :</h3>
-<p>The dataset that I will be using is the Sign Language MNIST. I used techniques such as
-    ensemble of networks, k-fold cross validations and multiclass HingeLoss
-</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://pytorch.org/assets/images/logo-icon.svg" alt="pytorch" width="40" height="40"/> </a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Contact</h2>
+            <p class="text-lg mb-4">Feel free to get in touch with me through the following contact form:</p>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 p-2 w-full border border-gray-300 rounded-md"></textarea>
+                </div>
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md">Send</button>
+            </form>
+        </div>
+    </section>
 
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/learning-DL-by-doing-1">Notebook</a></p>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white mt-16">
+        <div class="container mx-auto py-6 px-4 flex justify-between items-center">
+            <p>&copy; 2024 Landoulsi Mohamed Fares. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="https://github.com/Frostbite22" class="hover:text-gray-300">GitHub</a>
+                <a href="https://frostbite22.github.io/portfolio/" class="hover:text-gray-300">Portfolio</a>
+                <a href="https://linkedin.com/in/mohamed-fares-andaloussi" class="hover:text-gray-300">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
-<h3 >4-Transfer learning and SWA</h3>
-<h3 id="summary-">summary :</h3>
-<p>This project displays Stochastic Weighted Average(SWA) technique and transfer learning either 
-    by finetuning(slower) or fixed features extractor(faster) on small portion of data for ants and bees
-</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://pytorch.org/assets/images/logo-icon.svg" alt="pytorch" width="40" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/learning-DL-by-doing-2">Notebook</a></p>
-
-
-
-
-
-<h2 id="blockchain-applications-">Blockchain Applications :</h2>
-<h3 id="1-decentralized-courses-booking-system-based-on-smart-contracts-and-ethereum">1-Decentralized Courses Booking system based on Smart contracts and Ethereum</h3>
-<h3 id="summary-">summary :</h3>
-<p>Connect your wallet and login with your ethereum account and create paths, levels, courses as admin and you can book courses from a student account</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://reactjs.org/favicon.ico" alt="react" width="40" height="40"/> </a><a href="https://hardhat.org/" target="_blank" rel="noreferrer"> <img src="https://seeklogo.com/images/H/hardhat-logo-888739EBB4-seeklogo.com.png" alt="hardhat" width="40" height="40"/> </a> <a href="https://docs.ethers.io/v5/" target="_blank" rel="noreferrer"> <img src="https://docs.ethers.io/v5/static/logo.svg" alt="ethers" width="40" height="40"/> </a><a href="https://docs.soliditylang.org/en/v0.8.17/" target="_blank" rel="noreferrer"> <img src="https://docs.soliditylang.org/en/v0.8.17/_static/logo.svg" alt="solidity" width="40" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/DecentralizedCoursesBookingSystemFront">frontend</a><br>
-<a href="https://github.com/Frostbite22/DecentralizedCoursesBookingSystemFrontAdmin">frontend admin</a><br>
-<a href="https://github.com/Frostbite22/DecentralizedCoursesBookingSystemFrontAdmin">backend</a><br></p>
-<h3 id="deployed-at-">deployed at :</h3>
-<p><a href="https://frostbite22.github.io/DecentralizedCoursesBookingSystemFrontAdmin">admin interface </a><br>
-<a href="https://frostbite22.github.io/DecentralizedCoursesBookingSystemFront">student interface </a><br></p>
-<h2 id="web-development-applications-">Web development applications :</h2>
-<h3 id="1-concerto">1-Concerto</h3>
-<h3 id="summary-">summary :</h3>
-<p>Match artists with venues to make shows</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://reactjs.org/favicon.ico" alt="react" width="40" height="40"/> </a><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="postgres" width="40" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/Concerto-Frontend-React">frontend</a><br>
-<a href="https://github.com/Frostbite22/Concerto-backend-Flask">backend</a><br></p>
-<h3 id="2-world-cup-2022">2-World cup 2022</h3>
-<h3 id="summary-">summary :</h3>
-<p>World Cup matches, fixtures &amp; schedules and prediction with python and sklearn </p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/></a><a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a><a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a><a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/formationFrontAngular">frontend</a><br>
-<a href="https://github.com/Frostbite22/worldcup">backend</a><br>
-<a href="https://github.com/Frostbite22/matchPredictionService">prediction service</a><br></p>
-<h2 id="data-science-">Data science :</h2>
-<h3 id="1-tunisci">1-TuniSci</h3>
-<h3 id="summary-">summary :</h3>
-<p>Rank professors, researchers and scholars in Tunisian universities based on h-indexand i10-index</p>
-<h3 id="technologies-">technologies :</h3>
-<p> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://jupyter.org" target="_blank" rel="noreferrer"> <img src="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg" alt="jupyter" width="80" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/TuniSci">notebook and frontend</a><br></p>
-<h3 id="2-naive-images-search-engine">2-Naive images search engine</h3>
-<h3 id="summary-">summary :</h3>
-<p>Indexing RBG images using distance intersection of histograms </p>
-<h3 id="technologies-">technologies :</h3>
-<p> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://jupyter.org" target="_blank" rel="noreferrer"> <img src="https://jupyter.org/assets/logos/rectanglelogo-greytext-orangebody-greymoons.svg" alt="jupyter" width="80" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/Naive-images-search-engine">notebook and frontend</a><br></p>
-<h2 id="mobile-development-">Mobile development :</h2>
-<h3 id="1-digital-isi">1-Digital ISI</h3>
-<h3 id="summary-">summary :</h3>
-<p>This is digital ISI Ionic mobile app interacting with Camunda engine rest to connect administrators, students and professor and automate the boring tasks</p>
-<h3 id="technologies-">technologies :</h3>
-<p><a href="https://ionicframework.com" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="ionic" width="40" height="40"/> </a><a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a><a href="https://camunda.com/" target="_blank" rel="noreferrer"> <img src="https://camunda.com/wp-content/uploads/2020/05/logo-camunda-black.svg" alt="camunda" width="80" height="40"/> </a></p>
-
-<h3 id="project-links-">project links :</h3>
-<p><a href="https://github.com/Frostbite22/Digitalisi-Ionic-App">ionic app</a><br></p>
-<h2 id="contact">contact</h2>
-<p>📫 How to reach me : <strong>landoulsiferes@outlook.com</strong></p>
-</body></html>
+</body>
+</html>
