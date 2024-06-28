@@ -5,21 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Landoulsi Mohamed Fares</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .experience-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .experience-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+        .close:hover {
+            color: #000;
+        }
+        .modal-header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .modal-body {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header Section -->
-     <!-- Header Section -->
-     <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
         <div class="container mx-auto py-6 px-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold">Landoulsi Mohamed Fares</h1>
-            <!-- Mobile Menu Button -->
             <button class="text-white md:hidden focus:outline-none" onclick="toggleMenu()">
                 <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
-            <!-- Desktop Menu -->
             <nav class="hidden md:block">
                 <a href="#about" class="mx-3 text-lg">About</a>
                 <a href="#experience" class="mx-3 text-lg">Experience</a>
@@ -28,7 +75,6 @@
                 <a href="#contact" class="mx-3 text-lg">Contact</a>
             </nav>
         </div>
-        <!-- Mobile Menu (hidden by default) -->
         <nav class="md:hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center absolute w-full top-16 left-0 hidden" id="mobileMenu">
             <div>
                 <a href="#about" class="block py-2">About</a>
@@ -39,7 +85,6 @@
             </div>
         </nav>
     </header>
-
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
@@ -55,18 +100,17 @@
             <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">Experience</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Experience Card -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="experience-card bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="showModal('modal1')">
                     <h3 class="text-2xl font-semibold mb-2">Junior AI Engineer - Novobit</h3>
                     <p class="text-gray-700 mb-4">January 2024 - Ongoing</p>
                     <p>Worked on a code generation project using NLP and modern LLM methods.</p>
                 </div>
-                <!-- More Experience Cards -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="experience-card bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="showModal('modal2')">
                     <h3 class="text-2xl font-semibold mb-2">AI Intern - Novobit</h3>
                     <p class="text-gray-700 mb-4">May 2023 - December 2023</p>
                     <p>Developed obstacle detection systems for smart glasses for visually impaired individuals.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="experience-card bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="showModal('modal3')">
                     <h3 class="text-2xl font-semibold mb-2">NLU/NLP Developer Intern - iCompass</h3>
                     <p class="text-gray-700 mb-4">February 2020 - June 2020</p>
                     <p>Developed a chatbot development platform using Rasa Open Source and Flask to generate chatbots.</p>
@@ -75,8 +119,8 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+       <!-- Projects Section -->
+       <section id="projects" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -185,13 +229,79 @@
             </div>
         </div>
     </footer>
-        <!-- JavaScript for Mobile Menu Toggle -->
-        <script>
-            function toggleMenu() {
-                var mobileMenu = document.getElementById("mobileMenu");
-                mobileMenu.classList.toggle("hidden");
-            }
-        </script>
-    
+
+
+    <!-- Modals -->
+    <div id="modal1" class="modal flex">
+        <div class="modal-content">
+            <span class="close text-xl" onclick="hideModal('modal1')">&times;</span>
+            <div class="modal-header">
+                <h2 class="text-2xl font-bold mb-2">Junior AI Engineer - Novobit</h2>
+                <p class="text-gray-700 mb-4"><strong>January 2024 - Ongoing</strong></p>
+            </div>
+            <div class="modal-body">
+                <p>This project aims to generate code in different programming languages from user stories to help the developers be more productive. In was in charge of:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Extracting relevant information from the user stories using classic NLP such as part of speech tagging, modern methods to generate descriptive text using LLama3.</li>
+                    <li>Analyzing user stories and checking if they provide enough information using SroBERTa to be able to pass them to the LLM (GPT-4) and generate the correct code.</li>
+                    <li>Improving the prompt that we pass to the LLM.</li>
+                    <li>Help deploying the Llama3 using an inference server Ollama.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal flex">
+        <div class="modal-content">
+            <span class="close text-xl" onclick="hideModal('modal2')">&times;</span>
+            <div class="modal-header">
+                <h2 class="text-2xl font-bold mb-2">AI Intern - Novobit</h2>
+                <p class="text-gray-700 mb-4"><strong>May 2023 - December 2023</strong></p>
+            </div>
+            <div class="modal-body">
+                <p>This project is a subproject of a smart glasses project that aims to provide assistance for individuals with visual impairment. The whole project contains these subprojects:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Police gestures recognition, hand gestures recognition, traffic signs recognition, face recognition, obstacle detection.</li>
+                </ul>
+                <p>I was in charge of the obstacle detection system with two of my colleagues:</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>This part of the smart glasses project helps visually impaired individuals be fully autonomous in homes and outside by providing an interactive speech recognition module and wake word detection technology. The individual can ask about the environment around him and get accurate descriptions (image captioning model named BLIP) and ask questions about the scene (visual question answering model named ViLT) and search for specific objects (GroundingDino model). Our obstacle detection system detects obstacles using Yolov8, an instance segmentation model.</li>
+                    <li>I was in charge as well of integrating this project with an Intel RealSense camera model 435i to be able to get the depth estimation and extract distance from the camera to the objects to improve our obstacle detection system.</li>
+                    <li>I took the responsibility of integrating the system as a whole on the Nvidia Jetson Orin card, including the other parts of the smart glasses project.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal flex">
+        <div class="modal-content">
+            <span class="close text-xl" onclick="hideModal('modal3')">&times;</span>
+            <div class="modal-header">
+                <h2 class="text-2xl font-bold mb-2">NLU/NLP Developer Intern - iCompass</h2>
+                <p class="text-gray-700 mb-4"><strong>February 2020 - June 2020</strong></p>
+            </div>
+            <div class="modal-body">
+                <p>Was in charge of developing a chatbot development platform based on Rasa Open source framework to automate the development of chatbots for both chatbot developers and non-tech users.</p>
+                <p>Have learnt how to use NLP, NLU and REST API's in a real development project and expanded my knowledge on MongoDB, Flask, Javascript, Scrum and UML.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+        }
+
+        function hideModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
