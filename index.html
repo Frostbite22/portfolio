@@ -9,10 +9,18 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header Section -->
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+     <!-- Header Section -->
+     <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
         <div class="container mx-auto py-6 px-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold">Landoulsi Mohamed Fares</h1>
-            <nav>
+            <!-- Mobile Menu Button -->
+            <button class="text-white md:hidden focus:outline-none" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:block">
                 <a href="#about" class="mx-3 text-lg">About</a>
                 <a href="#experience" class="mx-3 text-lg">Experience</a>
                 <a href="#projects" class="mx-3 text-lg">Projects</a>
@@ -20,7 +28,18 @@
                 <a href="#contact" class="mx-3 text-lg">Contact</a>
             </nav>
         </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <nav class="md:hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center absolute w-full top-16 left-0 hidden" id="mobileMenu">
+            <div>
+                <a href="#about" class="block py-2">About</a>
+                <a href="#experience" class="block py-2">Experience</a>
+                <a href="#projects" class="block py-2">Projects</a>
+                <a href="#skills" class="block py-2">Skills & Certificates</a>
+                <a href="#contact" class="block py-2">Contact</a>
+            </div>
+        </nav>
     </header>
+
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
@@ -165,6 +184,14 @@
             </div>
         </div>
     </footer>
+        <!-- JavaScript for Mobile Menu Toggle -->
+        <script>
+            function toggleMenu() {
+                var mobileMenu = document.getElementById("mobileMenu");
+                mobileMenu.classList.toggle("hidden");
+            }
+        </script>
+    
     
 </body>
 </html>
